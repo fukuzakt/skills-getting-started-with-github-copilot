@@ -112,7 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (response.ok) {
         messageDiv.textContent = result.message;
         messageDiv.className = "success";
-        signupForm.reset();
+          signupForm.reset();
+          fetchActivities(); // 参加者登録後に活動リストを更新
       } else {
         messageDiv.textContent = result.detail || "An error occurred";
         messageDiv.className = "error";
